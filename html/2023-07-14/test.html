@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale="1.0">
+    <title>Javascript 실습하기</title>
+
+    <!-- 이부분 추가 (10) -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 이부분 추가 (14~24)-->
+    <ul class="btns">
+      <li class="on">button1</li>
+      <li>button2</li>
+      <li>button3</li>
+    </ul>
+
+    <section>
+      <article class="on">BOX1</article>
+      <article>BOX2</article>
+      <article>BOX3</article>
+    </section>
+    <!--
+    <a href="http://www.naver.com" target="_blank">CLICK </a>
+    
+    <div id = "box"> </div>
+    <a href="#" class="btnLeft">왼쪽으로 회전</a>
+    <a href="#" class="btnRight">오른쪽으로 회전</a>
+-->
+    <script>
+      const btns = document.querySelectorAll(".btns li");
+      const boxs = document.querySelectorAll("section article");
+
+      function activation(index, list) {
+        for (let el of list) {
+          el.classList.remove("on");
+        }
+        list[index].classList.add("on");
+      }
+
+      for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", (e) => {
+          activation(i, btns);
+          activation(i, boxs);
+        });
+      }
+    </script>
+  </body>
+</html>

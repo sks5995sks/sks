@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="" utf-8 />
+    <title>리스트로 메뉴 만들기</title>
+    <style>
+      p {
+        color: white;
+      }
+      @keyframes textColorAnimation {
+        14% {
+          background-color: yellow;
+          color: red;
+        }
+        28% {
+          background-color: green;
+          color: orange;
+        }
+        42% {
+          background-color: blue;
+          color: yellow;
+        }
+        56% {
+          background-color: navy;
+          color: green;
+        }
+        70% {
+          background-color: blueviolet;
+          color: blue;
+        }
+        84% {
+          background-color: red;
+          color: navy;
+        }
+        96% {
+          background-color: orange;
+          color: blueviolet;
+        }
+      }
+      span {
+        animation-name: textColorAnimation;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        font-size: xxx-large;
+      }
+      #menubar {
+        background: #e75fee;
+      }
+      #menubar ul {
+        margin: 0;
+        padding: 0;
+        width: 567px;
+      }
+      #menubar ul li {
+        display: inline-block;
+        list-style-type: none;
+        padding: 0px 15px;
+      }
+      #menubar ul li a {
+        color: #001100;
+        text-decoration: none;
+      }
+      #menubar ul li a:hover {
+        color: #00ffee;
+      }
+    </style>
+  </head>
+  <body bgcolor="black">
+    <nav id="menubar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Espresso</a></li>
+        <li><a href="#">Cappuccino</a></li>
+        <li><a href="#">Cafe Latte</a></li>
+        <li><a href="#">F.A.Q</a></li>
+      </ul>
+    </nav>
+    <p><span>안녕하세요</span> <br />텍스트 색변환</p>
+  </body>
+</html>

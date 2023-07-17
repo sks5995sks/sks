@@ -1,0 +1,42 @@
+@import "reset.css";
+body {
+  background-color: #a6ffe3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+.canvas {
+  width: 700px;
+  height: 800px;
+  background-color: white;
+  border-radius: 30px;
+}
+.controls {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.controls .controls_colors {
+  display: flex;
+}
+.controls_colors .controls_colors {
+  width: 70px;
+  height: 55px;
+  border-radius: 180px;
+  cursor: pointer;
+}
+.controls .controls_range {
+  margin-bottom: 10px;
+}
+#s_color_picker_id {
+  cursor: pointer;
+  text-align: center;
+}
+#color_id {
+  width: 70px;
+  height: 55px;
+  border-radius: 180px;
+  background-color: #000;
+}
