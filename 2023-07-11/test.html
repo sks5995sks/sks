@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="urf-8" />
+    <script>
+      class User {
+        constructor(name, num) {
+          this.name = name;
+          this.num = num;
+          this.school = "군포e비즈니스고";
+          this.grade = "3학년";
+        }
+        print_info() {
+          document.write(
+            this.school +
+              " " +
+              this.grade +
+              " " +
+              this.name +
+              " " +
+              this.num +
+              "<br>"
+          );
+        }
+      }
+      class Person extends User {
+        print_info() {
+          document.write(
+            "사람 " +
+              this.school +
+              " " +
+              this.grade +
+              " " +
+              this.name +
+              " " +
+              this.num +
+              "<br>"
+          );
+        }
+      }
+    </script>
+    <!-- <script>
+      function gugudan(n) {
+        let m = parseInt(n);
+        if (isNaN(m) || m < 1 || m > 9) {
+          alert("범위 초과");
+          return;
+        }
+        for (let i = 1; i <= 9; i++) {
+          document.write(m + "x" + i + "=" + m * i + "<br>");
+        }
+      }
+    </script> -->
+    <!-- <script>
+      function over(obj) {
+        obj.src = "banana.png";
+      }
+      function out(obj) {
+        obj.src = "apple.png";
+      }
+    </script>  -->
+  </head>
+  <body>
+    <h1 id="clock">현재 시간</h1>
+    <script>
+      let person = new Person("김대호", 30401);
+      person.print_info();
+      function getTime() {
+        let = current = new Date();
+        if (current.getSeconds() % 2 == 0) {
+          document.body.style.backgroundColor = "#00FFE3";
+        } else {
+          document.body.style.backgroundColor = "#00FF00";
+        }
+        // document.write("현재 시간 : ");
+        // document.write(current.getHours(), "시 ");
+        // document.write(current.getMinutes(), "분 ");
+        // document.write(current.getSeconds(), "초<br>");
+        hour = current.getHours();
+        minutes = current.getMinutes();
+        seconds = current.getSeconds();
+        clock = document.getElementById("clock");
+        clock.innerText = `${hour}:${minutes}:${seconds}`;
+      }
+      setInterval(getTime, 1000);
+    </script>
+    <!-- <script>
+      let n = prompt("구구단 x를 입력 ");
+      gugudan(n);
+    </script> -->
+    <!-- <script>
+      for (let i = 10; i <= 35; i += 5) {
+        document.write("<span ");
+        document.write("style='font-size:" + i + "px'>");
+        document.write(i + "px");
+        document.write("</span>");
+      }
+    </script> -->
+    <!-- <script>
+      alert("경고 다이얼로그!");
+      let ret = confirm("남자?"); //prompt = 입력 confirm = 확인, 취소 alert
+      if (ret == true) {
+        document.write("남자");
+      } else {
+        document.write("여자");
+      }
+      document.writeln("<h3>test!!</h3>");
+      document.writeln("2+5는 ");
+      document.write("<mark>7</mark>");
+    </script> -->
+    <!-- <title>이미지 바꾸기</title>
+    <h3>사과 바나나</h3>
+    <hr />
+    <img
+      src="apple.png"
+      width="300px"
+      height="300px"
+      onmouseover="over(this)"
+      onmouseout="out(this)"
+    />
+    <br />
+    <a href="javascript:alert('click')"> 클릭해봐 </a> -->
+  </body>
+</html>
