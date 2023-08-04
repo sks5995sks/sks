@@ -119,11 +119,13 @@ footer .lower .content_right {
 }
 /* other */
 figure img{
-  padding-top: 50px;
-  width: 630px;
-  height: 550px;
-  padding-left: 250px;
+  width: 50%;
   float: left;
+}
+figure .me{
+  width: 25%;
+  padding-left: 7%;
+  padding-top: 3.2%;
 }
 figure .right{
   padding-top: 50px;
